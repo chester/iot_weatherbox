@@ -7,9 +7,9 @@
 <form class='ui form' action='/set-color' method='post' id='color-form'>
     <input type='text' class='jscolor two wide field' name='color' value='<%= settings.lightColor %>'>
     
-    <input type='checkbox' name='options[setAsDefault]' id='set-as-default' hidden> Set as Default
-    <input type='checkbox' name='options[changeToDefault]' id='change-to-default' hidden> Change to Default
-    <input type='checkbox' name='options[turnOff]' id='turn-off' hidden> Turn Off
+    <input type='checkbox' name='options[setAsDefault]' id='set-as-default' hidden>
+    <input type='checkbox' name='options[changeToDefault]' id='change-to-default' hidden>
+    <input type='checkbox' name='options[turnOff]' id='turn-off' hidden>
 
     <div class='ui submit button' id='change-color' onclick='submit()'>Change Color</div>
     <div class='ui submit button' id='set-default-button' onclick='submit(true)'>Set As Default</div>
