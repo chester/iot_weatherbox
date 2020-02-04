@@ -3,7 +3,7 @@ var express     = require('express'),
     db          = require('../models'),
     dataHelpers = require('../helpers/data');
     statsHelpers = require('../helpers/stats'),
-    // settingsHelpers = require('../helpers/settings');
+    settingsHelpers = require('../helpers/settings');
 
 router.route('/data')
     .get(dataHelpers.getData)
@@ -16,12 +16,12 @@ router.route('/data/:id')
     .delete(dataHelpers.deleteOneData);
 
 router.route('/settings')
-    .get()
-    .put();
+    .get(settingsHelpers.getSettings)
+    .put(settingsHelpers.editSettings);
 
 router.route('/statistics')
-    .get()
-    .put()
+    .get(statsHelpers.getStats)
+    .put(statsHelpers.editStats)
     .delete(statsHelpers.resetStats);
 
 module.exports = router;
